@@ -1,0 +1,32 @@
+*"<sup.*sup>|<sub.*sub>" "",remove,tags,
+*"(\d|\s|\r|\n|\t){6,}" "",remove,sequence,numbers,
+"{#69}" " . ket.  "
+^"BEC" "B E C"
+"{#2}" " ohms ",symbol,ohm,
+"Trisolarans" "Tri-sol-arens"
+*"(?i)\ssec\." " section",expand,abbreviation,
+"{#68}" " . bra.  "
+"|" " . bar. "
+"{#20}" "open bracket"
+"{#21}" "close bracket"
+*"(?i)\b\Qqubits\E\b" "qbits"
+*"\[(\d{1,3})(,\d{1,3}){0,5}\]" "",remove,references,
+*"(?i)\b\Qpicometer\E\b" "pico-meter"
+*"(?i)\b\Qpiezoelectric\E\b" "peezoelectric",piezoelectric,pronounce,
+^" nA" "nano amps",units,
+^" kHz" " kilohertz",units,
+^" M ohms " " mega ohms ",units,
+^" mV" " millivolts",remove,tags,
+^" k ohms" "kilo-ohms",units,
+*"(\d)\sK(\.| )" "$001 kelvin$002",kelvin,
+*"(\d)\spm(\.| )" "$001 pico meters $002",units,
+"This article is copyrighted as indicated in the article." "",remove,footer,
+"Reuse of AIP content is subject to the terms at: http://scitationnew.aip.org/termsconditions." "",remove,tags,
+*"(\d)\smin(\s|\.)" "$001 minutes$002",remove,tags,
+*"(\d)\snm(\s|\.)" "$001 nanometers $002",remove,tags,
+*"\b[:upper:]{2,}\b" "A->a",remove,case,
+"readback" "read back",expand,pronounce,
+"thermomechanical" "thermo-mechanical",pronounce,
+" PRL " " physical review letters ",abbreviation,
+^"He" "helium ",abbreviation,
+^"μm" "micron",remove,tags,
